@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="page-header" style="background-color:brown">
+        <h1 class="text-center">Contactez nous</h1>
+        <a href="#" style="color:black"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+    </header>
+
+
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <p class="panel-title">Critères du ticket</p>
+            </div>
+            <div class="panel-body">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="identifiant du ticket">Identifiant du ticket: </label>
+                        <input type="default" class="form-control" id="pwd">
+                        <div class="dropdown">
+                            <label for="categorie">Catégorie: </label>
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">Sous-categorie 1</li>
+                                <li>
+                                    <a href="#">Commerciale</a>
+                                </li>
+                                <li>
+                                    <a href="#">Technique</a>
+                                </li>
+                                <li class="dropdown-header">Sous-categorie 2</li>
+                                <li>
+                                    <a href="#">Autre</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <label for="statut">Statut: </label>
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Ouvert</a></li>
+                                <li><a href="#">En Attente</a></li>
+                                <li><a href="#">Traité</a></li>
+                            </ul>
+                        </div>
+                        <label for="date">Du:</label>
+                        <input type="date" class="form-control" id="date"><span class="glyphicon glyphicon-calendar"></span>
+                        <label for="date">au:</label>
+                        <input type="date" class="form-control" id="date"><span class="glyphicon glyphicon-calendar"></span>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <div class="container">
+        <p>Recherchez dans vos tickets :</p>
+        <input class="form-control" id="myInput" type="text" placeholder="Rechercher..">
+        <br>
+
+        <div class="table-responsive" class="well">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Identifiant du ticket</th>
+                        <th>Catégorie</th>
+                        <th>Statut</th>
+                        <th>Compte</th>
+                        <th>Date de soumission</th>
+                        <th>Détails</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    <tr>
+                        <td>12345</td>
+                        <td>Technique</td>
+                        <td>Ouvert</td>
+                        <td>srg</td>
+                        <td>01/12/2017</td>
+                        <td>
+                            <a href="#">Consulter détail</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>23456</td>
+                        <td>Facturation</td>
+                        <td>Ouvert</td>
+                        <td>tdd</td>
+                        <td>24/12/2017</td>
+                        <td>
+                            <a href="#">Consulter détail</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>56789</td>
+                        <td>Technique</td>
+                        <td>Ouvert</td>
+                        <td>thx</td>
+                        <td>01/11/2017</td>
+                        <td>
+                            <a href="#">Consulter détail</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>987654</td>
+                        <td>Technique</td>
+                        <td>Ouvert</td>
+                        <td>wow</td>
+                        <td>01/09/2017</td>
+                        <td>
+                            <a href="#">Consulter détail</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col"></div>
+</div>
+    <button class="container-s text-center" type="button" class="btn btn-link">Soumettre un ticket  <span class="glyphicon glyphicon-tags"></span></button>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
