@@ -18,9 +18,15 @@
 
 <body>
 
-    <header class="page-header" style="background-color:brown">
-        <h1 class="text-center">Contactez nous</h1>
-        <a href="#" style="color:black"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+    <header class="page-header" style="background-color:rgb(165, 65, 65)">
+        
+        <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4" style="margin-left:6%"><h1 >Contactez nous</h1></div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2"><a href="#" style="color:black; font-size:175%"><span class="glyphicon glyphicon-log-in"></span> Login</a></div>
+            </div>
+        
     </header>
 
 
@@ -33,10 +39,10 @@
                 <form class="form-inline">
                     <div class="form-group">
                         <label for="identifiant du ticket">Identifiant du ticket: </label>
-                        <input type="default" class="form-control" id="pwd">
+                        <input type="default" class="form-control" id="myInput">
                         <div class="dropdown">
                             <label for="categorie">Catégorie: </label>
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="myInput">
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
@@ -55,19 +61,22 @@
                         </div>
                         <div class="dropdown">
                             <label for="statut">Statut: </label>
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="myInput">
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Ouvert</a></li>
-                                <li><a href="#">En Attente</a></li>
+                                <li><a href="#">En attente</a></li>
                                 <li><a href="#">Traité</a></li>
                             </ul>
                         </div>
                         <label for="date">Du:</label>
-                        <input type="date" class="form-control" id="date"><span class="glyphicon glyphicon-calendar"></span>
+                        <input type="date" class="form-control" id="myInput"><span class="glyphicon glyphicon-calendar"></span>
                         <label for="date">au:</label>
-                        <input type="date" class="form-control" id="date"><span class="glyphicon glyphicon-calendar"></span>
+                        <input type="date" class="form-control" id="myInput"><span class="glyphicon glyphicon-calendar"></span>
+                    </div>
+                    <div class="row">
+                       <button class="col-sm-4" type="button" class="btn btn-default">Rechercher</button>
                     </div>
 
                 </form>
@@ -98,7 +107,7 @@
                 </thead>
                 <tbody id="myTable">
                     <tr>
-                        <td>12345</td>
+                        <td>#12345</td>
                         <td>Technique</td>
                         <td>Ouvert</td>
                         <td>srg</td>
@@ -108,9 +117,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>23456</td>
+                        <td>#23456</td>
                         <td>Facturation</td>
-                        <td>Ouvert</td>
+                        <td>En attente</td>
                         <td>tdd</td>
                         <td>24/12/2017</td>
                         <td>
@@ -118,7 +127,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>56789</td>
+                        <td>#56789</td>
                         <td>Technique</td>
                         <td>Ouvert</td>
                         <td>thx</td>
@@ -128,9 +137,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>987654</td>
+                        <td>#987654</td>
                         <td>Technique</td>
-                        <td>Ouvert</td>
+                        <td>Traité</td>
                         <td>wow</td>
                         <td>01/09/2017</td>
                         <td>
@@ -143,9 +152,13 @@
     </div>
 
 <div class="row">
-    <div class="col"></div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <button class="container-sm" style="margin-left:25%"  type="button" class="btn btn-link">Soumettre un ticket  <span class="glyphicon glyphicon-tags"></span></button>
+    </div>
+    <div class="col-sm-4"></div>
 </div>
-    <button class="container-s text-center" type="button" class="btn btn-link">Soumettre un ticket  <span class="glyphicon glyphicon-tags"></span></button>
+    
 
 
 
